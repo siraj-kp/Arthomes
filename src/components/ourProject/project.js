@@ -3,6 +3,8 @@ import React, {Component} from 'react'
 import Carousel1 from '../../assets/images/carousel1.jpg';
 import Carousel2 from '../../assets/images/carousel2.jpg';
 import Carousel3 from '../../assets/images/carousel3.jpg';
+import Video from '../../assets/videos/bg-video.mp4';
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
@@ -56,20 +58,17 @@ class OurProject extends Component {
                         
                         <div className="">
                         <Carousel >
-                    <div>
-
-                        <img src={Carousel1} alt="carousel pic" />
-                         
-                    </div>
-                    <div>
-                        <img src={Carousel2} alt="carousel pic" />
-                        
-                    </div>
-                    <div>
-                        <img src={Carousel3} alt="carousel pic" />
-                       
-                    </div>
-                </Carousel> 
+                            
+                            <div>
+                                <img src={Carousel1} alt="carousel pic" />
+                            </div>
+                            <div>
+                                <img src={Carousel2} alt="carousel pic" />
+                            </div>
+                            <div>
+                                <img src={Carousel3} alt="carousel pic" />
+                            </div>
+                        </Carousel> 
                         </div>
                             <p>When you have a home built, you are not only buying a product, but also a service. As an experienced custom home builder, we have the ability to control the quality of our workmanship to the highest standards. We employ only qualified personnel who are committed to upholding this high level of excellence. We strive to give the best possible service before, during, and after the construction process.</p>
                         </div>   
@@ -90,20 +89,21 @@ class OurProject extends Component {
                         
                         <div className="">
                         <Carousel >
-                    <div>
-
-                        <img src={Carousel1} alt="carousel pic" />
-                         
-                    </div>
-                    <div>
-                        <img src={Carousel2} alt="carousel pic" />
-                        
-                    </div>
-                    <div>
-                    <img src={Carousel3} alt="carousel pic" />
-                       
-                    </div>
-                </Carousel> 
+                            <div>
+                                <video autoPlay muted loop >
+                                    <source src={Video} type="video/mp4"/>
+                                </video>
+                            </div>
+                            <div>
+                                <img src={Carousel1} alt="carousel pic" />
+                            </div>
+                            <div>
+                                <img src={Carousel2} alt="carousel pic" />
+                            </div>
+                            <div>
+                            <img src={Carousel3} alt="carousel pic" />
+                            </div>
+                        </Carousel> 
                         </div>
                             <p>When you have a home built, you are not only buying a product, but also a service. As an experienced custom home builder, we have the ability to control the quality of our workmanship to the highest standards. We employ only qualified personnel who are committed to upholding this high level of excellence. We strive to give the best possible service before, during, and after the construction process.</p>
                         </div>   
