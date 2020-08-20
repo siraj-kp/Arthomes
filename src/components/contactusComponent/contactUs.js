@@ -57,7 +57,7 @@ class Contact extends Component {
             mobile: this.state.mobile
         }
         
-        axios.post('https://arthomes.vercel.app/', data)
+        axios.post('https://arthomesnode.vercel.app/', data)
         .then( res => {
             this.setState({ sent: true }, this.resetForm())
         })

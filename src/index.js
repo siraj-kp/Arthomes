@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-//import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
+import "react-image-gallery/styles/css/image-gallery.css";
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
