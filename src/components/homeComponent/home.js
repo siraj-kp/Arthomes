@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import Carousel1 from "../../assets/images/carousel1.jpg";
+import Carousel3 from "../../assets/images/bgimage.jpg";
 import Carousel2 from "../../assets/images/carousel2.jpg";
-import Carousel3 from "../../assets/images/carousel3.jpg";
-import Card1 from "../../assets/images/card1.jpg";
-import Card2 from "../../assets/images/card2.jpg";
-import Card3 from "../../assets/images/card3.jpg";
-import Card4 from "../../assets/images/card4.jpg";
+import card3 from "../../assets/images/card3.jpg";
+
 import Video from '../../assets/videos/bg-video.mp4';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,70 +11,20 @@ import Azharu from "../../assets/images/Azharu.JPG";
 import Busthan from "../../assets/images/Busthan.JPG";
 import Junaid from "../../assets/images/Junaid.JPG";
 import Sainu from "../../assets/images/Sainu.JPG";
-
-
-
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
 import { cardItem } from "../../assets/js/items"
 
 
-
 const Home = (props) => {
-  // const [cardContent, setCardContent] = useState(true);
-  // const [homeContent, setHomeContent] = useState(false);
- 
-
-  
-  
-
-  // console.log(newItem);
-
-  //  const contentHandler = (id) => {
-  // //   setCardContent(false);
-  // //   setHomeContent(true);
-
-  // //   // setNewItem([ cardItem.filter(cardItem => cardItem.cardId === id)]);
-  //     setNewItem(newItem.filter(cardItem => cardItem.cardId === id));
-
-  //     console.log(newItem);
-  //   return (
-  //     <listItemContext.Provider  value={[newItem, setNewItem]}></listItemContext.Provider>
-      
-  //   )
-
-    
-    
-  //  };
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     homeContent: true,
-  //     cardContent: false,
-  //     uid: [],
-  //     newItem: [],
-  //   };
-  // }
-// console.log(setNewItem);
- 
-
-  
     return (
-      <div>
-        {/* {cardContent ? ( */}
-          <div className="home-wrapper">
-            {/* <section id="landing" class="text-white">
-            <video autoPlay muted loop class="position-fixed">
-                <source src={Video} type="video/mp4"/>
-            </video>
+      <div className="home-wrapper">
 
-
-        </section> */}
-
+          <div >
+            <div className="carousel-wrapper">
             <Carousel autoPlay infiniteLoop>
-              
               <div>
-                <img src={Carousel1} alt="carousel pic" />
+                <img src={card3} alt="carousel pic" />
               </div>
               <div>
                 <img src={Carousel2} alt="carousel pic" />
@@ -86,13 +33,13 @@ const Home = (props) => {
                 <img src={Carousel3} alt="carousel pic" />
               </div>
             </Carousel>
-
+            </div>
             <div className="card-wrapper">
               <div className="row">
                 {cardItem.map((cardItem, index) => (
                   <div key={index} className="col-lg-3 card-item">
                     <div className="card" style={{ width: "18rem" }}>
-                      <img src={Card1} className="card-img-top" alt="..." />
+                      <img src={cardItem.cardImage} className="card-img-top" alt="..." />
                       <div className="card-body">
                         <h5 className="card-title">{cardItem.cardTitle}</h5>
                         <p className="card-text">{cardItem.cardDescription}</p>
@@ -103,7 +50,6 @@ const Home = (props) => {
                           >
                             <button
                               className="card-button"
-                              //onClick={() => setNewItem(newItem.filter(cardItem => cardItem.cardId === index))}
                             >
                               Read More
                             </button>
@@ -113,42 +59,6 @@ const Home = (props) => {
                     </div>
                   </div>
                 ))}
-                {/* <div className="col-lg-3">
-                            <div className="card" style={{ width: "18rem" }}>
-                                <img src={Card2} className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div className="card-btn-wrapper">
-                                    <a href="#"><button className="card-button">View More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className="card" style={{ width: "18rem" }}>
-                                <img src={Card3} className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div className="card-btn-wrapper">
-                                    <a href="#"><button className="card-button">View More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className="card" style={{ width: "18rem" }}>
-                                <img src={Card4} className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div className="card-btn-wrapper">
-                                    <a href="#"><button className="card-button">View More</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> */}
               </div>
             </div>
             <section id="our-team">
@@ -217,10 +127,6 @@ const Home = (props) => {
                 </div>
             
         </section>
-
-
-
-
             <div className="bottom-list-wrapper">
               <div className="row padding20">
                 <div className="col-lg-4">
@@ -306,25 +212,7 @@ const Home = (props) => {
                 </div>
               </div>
             </div>
-            
-
-       
           </div>
-        {/* ) : (
-          ""
-        )} */}
-
-        {/* {setHomeContent ? (
-          <div className="about-body">
-             {newItem.map((card, index) => ( 
-              <div key={index} >
-                <h1>{card.cardTitle}</h1>
-              </div>
-             ))} 
-          </div>
-        ) : (
-          ""
-        )} */}
       </div>
     );
   }
