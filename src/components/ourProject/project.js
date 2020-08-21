@@ -85,15 +85,52 @@ class OurProject extends Component {
                             </div>
                         </div>
                         <div className="about-content">
-                            <p>Art homes Group is a company owned by a young enthusiastic minds whose aim is to bring a new revolution in building and infrastructure . Over the years, we have helped many people realize the dream of building a home.</p>
+                            {/* <p>Art homes Group is a company owned by a young enthusiastic minds whose aim is to bring a new revolution in building and infrastructure . Over the years, we have helped many people realize the dream of building a home.</p> */}
                         
-                        <div className="">
-                        <Carousel >
-                            <div>
-                                <video autoPlay muted loop >
+                        <div className="row justify-content-center">
+
+
+                        <div className="card mr-5" style={{ width: "30rem" }}>
+                      <video  controls className="card-img-top">
+                                    <source src={Video} type="video/mp4"/>
+                                </video>
+                                <div className="card-body">
+                        <h5 className="card-title">Resort</h5>
+                        <p className="card-text">Art homes Group is a company owned by a young enthusiastic minds whose aim is to bring a new revolution in building and infrastructure . Over the years, we have helped many people realize the dream of building a home.</p>
+                        
+                      </div>
+                    </div>
+                    <div className="card mr-5" style={{ width: "30rem" }}>
+                      <video  controls className="card-img-top">
+                                    <source src={Video} type="video/mp4"/>
+                                </video>
+                                <div className="card-body">
+                                <h5 className="card-title">Resort</h5>
+                        <p className="card-text">Art homes Group is a company owned by a young enthusiastic minds whose aim is to bring a new revolution in building and infrastructure . Over the years, we have helped many people realize the dream of building a home.</p>
+                    </div>
+                    </div>
+                        {/* <div className="ml-5 mt-5 " >
+                                <video  controls >
                                     <source src={Video} type="video/mp4"/>
                                 </video>
                             </div>
+                            <div className="ml-5 mt-5">
+                                <video  controls >
+                                    <source src={Video} type="video/mp4"/>
+                                </video>
+                            </div>
+                            <div className="ml-5 mt-5">
+                                <video  controls >
+                                    <source src={Video} type="video/mp4"/>
+                                </video>
+                            </div>
+                            <div className="ml-5 mt-5">
+                                <video  controls >
+                                    <source src={Video} type="video/mp4"/>
+                                </video>
+                            </div> */}
+                        {/* <Carousel >
+                            
                             <div>
                                 <img src={Carousel1} alt="carousel pic" />
                             </div>
@@ -103,9 +140,9 @@ class OurProject extends Component {
                             <div>
                             <img src={Carousel3} alt="carousel pic" />
                             </div>
-                        </Carousel> 
+                        </Carousel>  */}
                         </div>
-                            <p>When you have a home built, you are not only buying a product, but also a service. As an experienced custom home builder, we have the ability to control the quality of our workmanship to the highest standards. We employ only qualified personnel who are committed to upholding this high level of excellence. We strive to give the best possible service before, during, and after the construction process.</p>
+                            {/* <p>When you have a home built, you are not only buying a product, but also a service. As an experienced custom home builder, we have the ability to control the quality of our workmanship to the highest standards. We employ only qualified personnel who are committed to upholding this high level of excellence. We strive to give the best possible service before, during, and after the construction process.</p> */}
                         </div>   
                     </div>
                       :" "

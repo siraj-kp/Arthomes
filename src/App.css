@@ -1,13 +1,43 @@
-
-
- body {
+/* /* body {
   height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
   padding: 0;
   color: #fff;
-  background-image: radial-gradient(#205d3e, #03211c, #00080a);
+  background-image: url(./assets//images/bgimage.jpg); 
+  /* background-image: radial-gradient(#205d3e, #03211c, #00080a); */
+  
+  
+ 
+  
+  /* overflow-x: hidden; */
+  
+
+ body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: "";
+  opacity: 0.8;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed-top;
+  background-size: cover;
+  top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-blend-mode: saturation;
+    z-index: -1;
+  color: #fff;
+  background-image: url(./assets//images/art-homes-logo1.png); 
+  filter: blur(15px);
+  /* background-image: radial-gradient(#205d3e, #03211c, #00080a); */
+  
   overflow-x: hidden;
 }
 
@@ -32,14 +62,15 @@
 
 
 .menu {
-  background: radial-gradient(#205d3e, #03211c, #00080a);
+  /* background: radial-gradient(#205d3e, #03211c, #00080a); */
+  background-color: #000;
   box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
   width: 100%;
-  height: 80px;
+  height: 100px;
   display: flex;
   z-index: 3;
   padding: 0 40px;
-  position: fixed;
+  position: relative;
   top: 0;
 }
 
@@ -84,24 +115,24 @@
 }
 
 .menu__link--active {
-  color: #ffaa3b;
+  color: #fff;
   border-top: 4px solid #ffaa3b;
   font-weight: 700;
 }
 
 .logo-wrapper {
-  padding: 10px;
+  padding-right: 20px;
 }
 
-.card-img-top{
+/* .card-img-top{
   width: 286px;
-}
+} */
 
 .menu__logo {
-  height: 60px;
-  width: 175px;
+  height: 100px;
+  width: 100px;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 50%;
 }
 
 .menu__search-button {
@@ -135,6 +166,10 @@
 .card {
   transition: transform .6s;
   max-height: 520px;
+  color: #000;
+}
+.card-body {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .card button {
@@ -154,7 +189,7 @@
 
 .card-wrapper {
   padding: 30px;
-  background: rgba(6, 35, 28, 0.1);
+  background: rgba(6, 35, 28, 0.3);
   border: 1px solid #000;
 }
 
@@ -177,7 +212,7 @@
   bottom: 0;
   margin-top: 0;
   padding: 5px;
-  background: radial-gradient(#205d3e, #03211c, #00080a) !important;
+  /* background: radial-gradient(#205d3e, #03211c, #00080a) !important; */
 }
 
 .carousel .control-arrow, .carousel.carousel-slider .control-arrow {
@@ -202,15 +237,15 @@
   background:rgba(99, 73, 73, 0.1);
   border-radius: 5px 5px 0 0;
   padding: 20px;
-  color: #fff;
+  color: #000;
   max-width: 1200px;
   margin: 20px auto;
   font-weight: 600;
 }
 
-.about-body {
+/* .about-body {
   margin-top: 100px;
-}
+} */
 
 .masthead {
   clip: auto;
@@ -222,14 +257,13 @@
   font-family: proxima-nova,sans-serif;
 letter-spacing: .075rem;
 text-transform: uppercase;
-color:
-#fff;
+color:#000;
 font-weight: 300;
 letter-spacing: .15em;
 margin: 0;
     margin-top: 0px;
 text-align: center;
-border-bottom: 5px solid #fff;
+border-bottom: 5px solid #000;
 font-size: 30px;
 }
 
@@ -265,8 +299,8 @@ font-size: 30px;
 
 .bottom-list-head {
   font-size: 20px;
-  color: #fff;
-  border-bottom: 2px solid #fff;
+  color: #000;
+  border-bottom: 2px solid #000;
 }
 
 .bottom-list-item {
@@ -280,7 +314,7 @@ font-size: 30px;
 }
 
 .bottom-list-link a {
-  color: rgb(153, 131, 131);
+  color: rgb(43 17 17);
   font-size: 15px;
 }
 
@@ -368,7 +402,9 @@ input::placeholder {
 
 #our-team { 
   padding: 5.6rem 0; 
-  color: #fff;
+  color: #000;
+  background: rgba(6, 35, 28, 0.5);
+
 }
 #our-team img {
     height: 270px;
