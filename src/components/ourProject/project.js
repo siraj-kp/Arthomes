@@ -57,7 +57,7 @@ class OurProject extends Component {
                             <p>Art homes Group is a company owned by a young enthusiastic minds whose aim is to bring a new revolution in building and infrastructure . Over the years, we have helped many people realize the dream of building a home.</p>
                         
                         <div className="">
-                        <Carousel >
+                        <Carousel autoPlay infiniteLoop>
                             
                             <div>
                                 <img src={Carousel1} alt="carousel pic" />
