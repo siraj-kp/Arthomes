@@ -39,7 +39,7 @@ class OurProject extends Component {
         return(
             <div className="container">
 
-                <div className="about-body">
+                <div className="about-body ">
                 <div className="tab-body">
                       <button className="tabActiveButton" onClick={this.ourprojects}>Our Projects</button>
                       <button className="tabActiveButton" onClick={this.ourdesigns}>Our Designs</button>

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import AboutImage from '../../assets/images/about.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios';
+
 
 class Contact extends Component {
     constructor(props) {
@@ -45,25 +45,13 @@ class Contact extends Component {
     }
 
     formSubmit = (e) => {
-        e.preventDefault()
+        console.log(this.state.name);
+        console.log(this.state.email);
+        console.log(this.state.mobile);
+
       
-        this.setState({
-            buttonText: '...sending'
-        })
-      
-        let data = {
-            name: this.state.name,
-            email: this.state.email,
-            mobile: this.state.mobile
-        }
         
-        axios.post('https://arthomesnode.vercel.app/', data)
-        .then( res => {
-            this.setState({ sent: true }, this.resetForm())
-        })
-        .catch( () => {
-          console.log('Message not sent')
-        })
+        
       }
 
       resetForm = () => {
