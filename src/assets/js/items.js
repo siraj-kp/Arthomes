@@ -36,4 +36,5 @@ export let cardItem = [
     cardDescription:
       "The single-family detached home is a type of building with an independent entrance... ",
   },
+  
 ];
