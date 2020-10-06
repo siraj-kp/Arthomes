@@ -34,11 +34,7 @@ class About extends Component {
                   <img className="about-img" src={AboutImage} alt="abt" />
                 </span>
               </div>
-              <div className="">
-                <span>
-                  <img className="about-img" src={AboutImage} alt="abt" />
-                </span>
-              </div>
+
               <p>
                 Art homes Group is a company owned by a young enthusiastic minds
                 whose aim is to bring a new revolution in building and
