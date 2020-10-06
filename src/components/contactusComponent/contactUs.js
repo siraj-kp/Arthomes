@@ -82,21 +82,21 @@ class Contact extends Component {
           </div>
           {this.state.contact ? (
             <div className="about-wrapper">
-              <div className="masthead">
-                <div className="masthead__wrap">
-                  <span className="masthead__title" aria-hidden="true">
-                    Contact Us
-                  </span>
-                </div>
-              </div>
               <div className="about-content">
                 <div className="row">
-                  <div className="col-4">
+                  <div className="col-lg-4 col-sm-12">
                     <span>
                       <img className="about-img" src={AboutImage} alt="Abt" />
                     </span>
                   </div>
-                  <div className="col-8">
+                  <div className="col-lg-8 col-sm-12 pl-5">
+                    <div className="masthead">
+                      <div className="masthead__wrap">
+                        <span className="masthead__title" aria-hidden="true">
+                          Contact Us
+                        </span>
+                      </div>
+                    </div>
                     <div className="art-homes-heading">
                       <span>Art Homes Group</span>
                     </div>
@@ -137,7 +137,9 @@ class Contact extends Component {
                           className="adress-icon"
                         />
                       </span>
-                      <span>08281562821</span>
+                      <a className="mail-link" href="tel:08281562821">
+                        08281562821
+                      </a>
                     </div>
                   </div>
                 </div>

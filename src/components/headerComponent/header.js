@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Headerlogo from "../../assets/images/art-homes-logo1.png";
 import { NavLink } from "react-router-dom";
 import NavLinks from "./NavLinks";
@@ -6,43 +6,39 @@ import { CSSTransition } from "react-transition-group";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import Backdrop from "./Backdrop";
+import SideDrawer from "./SideDrawer";
 
-class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      drawerIsOpen: false,
-      drawerIsClose: true,
-    };
-  }
+const Header = (props) => {
+  const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
-  openDrawer = () => {
-    this.setState({
-      drawerIsOpen: true,
-      drawerIsClose: false,
-    });
+  const openDrawer = () => {
+    setDrawerIsOpen(true);
   };
 
-  closeDrawer = () => {
-    this.setState({
-      drawerIsOpen: false,
-      drawerIsClose: true,
-    });
+  const closeDrawer = () => {
+    setDrawerIsOpen(false);
   };
+  return (
+    <React.Fragment>
+      {drawerIsOpen && <Backdrop onClick={closeDrawer} />}
 
-  render() {
-    return (
+      <SideDrawer show={drawerIsOpen} onClick={closeDrawer}>
+        <nav className="main-navigation__drawer-nav">
+          <NavLinks />
+        </nav>
+      </SideDrawer>
       <div className="header-wrapper">
+        {/* 
         {this.state.drawerIsOpen && <Backdrop onClick={this.closeDrawer} />}
         {this.state.drawerIsOpen && (
           <CSSTransition
             in={this.state.drawerIsOpen}
             timeout={200}
-            classNames="slide-in-right"
+            classNames="slide-in-left"
             mountOnEnter
             unmountOnExit
           >
-            <div className="side-bar" onClick={this.closeDrawer}>
+            <aside className="side-bar" onClick={this.closeDrawer}>
               <div className="">
                 <FontAwesomeIcon
                   size="2x"
@@ -53,15 +49,13 @@ class Header extends Component {
               </div>
 
               <NavLinks />
-            </div>
+            </aside>
           </CSSTransition>
         )}
+         */}
 
         <nav className="menu">
-          <button
-            className="main-navigation__menu-btn "
-            onClick={this.openDrawer}
-          >
+          <button className="main-navigation__menu-btn " onClick={openDrawer}>
             <span />
             <span />
             <span />
@@ -75,8 +69,8 @@ class Header extends Component {
           </div>
         </nav>
       </div>
-    );
-  }
-}
+    </React.Fragment>
+  );
+};
 
 export default Header;
